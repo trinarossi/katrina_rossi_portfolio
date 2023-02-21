@@ -1,0 +1,50 @@
+.header {
+  background: blueviolet;
+  color: white;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navContainer h1 {
+ font-size: 2rem;
+}
+
+.navContainer nav {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navContainer button {
+  position: relative;
+  font-size: 1rem;
+  color: white;
+  background: none;
+  border: none;
+}
+
+.navContainer button::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  left: 0;
+  bottom: -5px;
+  transform: scale(0, 1);
+  transition: transform 0.25s ease;
+}
+
+.navContainer button:hover::before {
+  transform: scale(1, 1);
+}
