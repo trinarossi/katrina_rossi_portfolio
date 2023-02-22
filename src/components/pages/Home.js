@@ -1,11 +1,14 @@
 import React from "react";
+import { useNav } from "../../hooks/useNav";
 
 const Home = () => {
+  const homeRef = useNav("Home");
+
   return (
     <div>
-      <main>
-        <h1>Hello World!</h1>
-      </main>
+      <section ref={homeRef} id="homePage">
+        <h1>Home</h1>
+      </section>
     </div>
   );
 };

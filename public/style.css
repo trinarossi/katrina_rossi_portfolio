@@ -7,3 +7,15 @@
 ul {
   list-style: none;
 }
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.secondary-section {
+  background: #b5b5b5;
+}

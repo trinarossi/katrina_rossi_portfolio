@@ -4041,22 +4041,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles_Header_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/Header.module.css */ "./src/styles/Header.module.css");
+/* harmony import */ var _context_NavProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../context/NavProvider */ "./src/context/NavProvider.js");
+/* harmony import */ var _styles_Header_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/Header.module.css */ "./src/styles/Header.module.css");
+
 
 
 var Header = function Header() {
+  var _useContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_context_NavProvider__WEBPACK_IMPORTED_MODULE_1__.NavContext),
+    activeLinkId = _useContext.activeLinkId;
+  console.log(activeLinkId);
   var navLinks = ["Home", "About", "Portfolio", "Contact"];
   var renderNavLink = function renderNavLink(content) {
+    var scrollToId = "".concat(content.toLowerCase(), "Page");
+    var handleClickNav = function handleClickNav() {
+      document.getElementById(scrollToId).scrollIntoView({
+        behavior: "smooth"
+      });
+    };
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
       key: content
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, content)));
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+      className: activeLinkId === content ? _styles_Header_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].activeClass : "",
+      onClick: handleClickNav
+    }, content)));
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("header", {
-    className: _styles_Header_module_css__WEBPACK_IMPORTED_MODULE_1__["default"].header
+    className: _styles_Header_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].header
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _styles_Header_module_css__WEBPACK_IMPORTED_MODULE_1__["default"].container
+    className: _styles_Header_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].container
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _styles_Header_module_css__WEBPACK_IMPORTED_MODULE_1__["default"].navContainer
+    className: _styles_Header_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].navContainer
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Katrina Rossi"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", null, navLinks.map(function (nav) {
     return renderNavLink(nav);
   })))));
@@ -4079,12 +4093,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./src/components/Header.js");
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index */ "./src/components/index.js");
+/* harmony import */ var _context_NavProvider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../context/NavProvider */ "./src/context/NavProvider.js");
+
+
+
+
 
 
 
 
 var Main = function Main() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_context_NavProvider__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_index__WEBPACK_IMPORTED_MODULE_2__.Home, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_index__WEBPACK_IMPORTED_MODULE_2__.About, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_index__WEBPACK_IMPORTED_MODULE_2__.Portfolio, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_index__WEBPACK_IMPORTED_MODULE_2__.Contact, null)));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Main);
 
@@ -4098,10 +4117,73 @@ var Main = function Main() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Home": () => (/* reexport safe */ _pages_Home__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */   "About": () => (/* reexport safe */ _pages_About__WEBPACK_IMPORTED_MODULE_1__["default"]),
+/* harmony export */   "Contact": () => (/* reexport safe */ _pages_Contact__WEBPACK_IMPORTED_MODULE_3__["default"]),
+/* harmony export */   "Home": () => (/* reexport safe */ _pages_Home__WEBPACK_IMPORTED_MODULE_0__["default"]),
+/* harmony export */   "Portfolio": () => (/* reexport safe */ _pages_Portfolio__WEBPACK_IMPORTED_MODULE_2__["default"])
 /* harmony export */ });
 /* harmony import */ var _pages_Home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pages/Home */ "./src/components/pages/Home.js");
+/* harmony import */ var _pages_About__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/About */ "./src/components/pages/About.js");
+/* harmony import */ var _pages_Portfolio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/Portfolio */ "./src/components/pages/Portfolio.js");
+/* harmony import */ var _pages_Contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/Contact */ "./src/components/pages/Contact.js");
 
+
+
+
+
+/***/ }),
+
+/***/ "./src/components/pages/About.js":
+/*!***************************************!*\
+  !*** ./src/components/pages/About.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _hooks_useNav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../hooks/useNav */ "./src/hooks/useNav.js");
+
+
+var About = function About() {
+  var aboutRef = (0,_hooks_useNav__WEBPACK_IMPORTED_MODULE_1__.useNav)("About");
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
+    ref: aboutRef,
+    id: "aboutPage",
+    className: "secondary-section"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "About")));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (About);
+
+/***/ }),
+
+/***/ "./src/components/pages/Contact.js":
+/*!*****************************************!*\
+  !*** ./src/components/pages/Contact.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _hooks_useNav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../hooks/useNav */ "./src/hooks/useNav.js");
+
+
+var Contact = function Contact() {
+  var contactRef = (0,_hooks_useNav__WEBPACK_IMPORTED_MODULE_1__.useNav)("Contact");
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
+    ref: contactRef,
+    id: "contactPage",
+    className: "secondary-section"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Contact")));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Contact);
 
 /***/ }),
 
@@ -4117,11 +4199,156 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _hooks_useNav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../hooks/useNav */ "./src/hooks/useNav.js");
+
 
 var Home = function Home() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Hello World!")));
+  var homeRef = (0,_hooks_useNav__WEBPACK_IMPORTED_MODULE_1__.useNav)("Home");
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
+    ref: homeRef,
+    id: "homePage"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Home")));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);
+
+/***/ }),
+
+/***/ "./src/components/pages/Portfolio.js":
+/*!*******************************************!*\
+  !*** ./src/components/pages/Portfolio.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _hooks_useNav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../hooks/useNav */ "./src/hooks/useNav.js");
+
+
+var Portfolio = function Portfolio() {
+  var portfolioRef = (0,_hooks_useNav__WEBPACK_IMPORTED_MODULE_1__.useNav)("Portfolio");
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
+    ref: portfolioRef,
+    id: "portfolioPage"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Portfolio")));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Portfolio);
+
+/***/ }),
+
+/***/ "./src/context/NavProvider.js":
+/*!************************************!*\
+  !*** ./src/context/NavProvider.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "NavContext": () => (/* binding */ NavContext),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var NavContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)();
+var NavProvider = function NavProvider(_ref) {
+  var children = _ref.children;
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("asdasf"),
+    _useState2 = _slicedToArray(_useState, 2),
+    activeLinkId = _useState2[0],
+    setActiveLinkId = _useState2[1];
+  var providerValue = {
+    activeLinkId: activeLinkId,
+    setActiveLinkId: setActiveLinkId
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(NavContext.Provider, {
+    value: providerValue
+  }, children);
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NavProvider);
+
+/***/ }),
+
+/***/ "./src/hooks/useNav.js":
+/*!*****************************!*\
+  !*** ./src/hooks/useNav.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useNav": () => (/* binding */ useNav)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _context_NavProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../context/NavProvider */ "./src/context/NavProvider.js");
+/* harmony import */ var _useOnScreen__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./useOnScreen */ "./src/hooks/useOnScreen.js");
+
+
+
+var useNav = function useNav(navLinkId) {
+  var ref = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  var _useContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_context_NavProvider__WEBPACK_IMPORTED_MODULE_1__.NavContext),
+    setActiveLinkId = _useContext.setActiveLinkId;
+  var isOnScreen = (0,_useOnScreen__WEBPACK_IMPORTED_MODULE_2__.useOnScreen)(ref);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (isOnScreen) {
+      setActiveLinkId(navLinkId);
+    }
+  }, [isOnScreen, setActiveLinkId, navLinkId]);
+  return ref;
+};
+
+/***/ }),
+
+/***/ "./src/hooks/useOnScreen.js":
+/*!**********************************!*\
+  !*** ./src/hooks/useOnScreen.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useOnScreen": () => (/* binding */ useOnScreen)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var useOnScreen = function useOnScreen(ref) {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState2 = _slicedToArray(_useState, 2),
+    isOnScreen = _useState2[0],
+    setIsOnScreen = _useState2[1];
+  var observer = new IntersectionObserver(function (_ref) {
+    var _ref2 = _slicedToArray(_ref, 1),
+      entry = _ref2[0];
+    setIsOnScreen(entry.isIntersecting);
+  }, {
+    threshold: 0.7
+  });
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    observer.observe(ref.current);
+    return function () {
+      return observer.disconnect();
+    };
+  });
+  return isOnScreen;
+};
 
 /***/ }),
 
@@ -4144,12 +4371,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".fu5wPeEeY19JO5Ykvtt9 {\r\n  background: blueviolet;\r\n  color: white;\r\n  padding: 1rem;\r\n  position: fixed;\r\n  width: 100%;\r\n}\r\n\r\n.Pe_Qka6g65LnVGsMOBcr {\r\n  max-width: 1500px;\r\n  margin: 0 auto;\r\n}\r\n\r\n.De4RBRN1la0WSh1yar6Q {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n}\r\n.De4RBRN1la0WSh1yar6Q h1 {\r\n font-size: 2rem;\r\n}\r\n\r\n.De4RBRN1la0WSh1yar6Q nav {\r\n  display: flex;\r\n  gap: 2.5rem;\r\n}\r\n\r\n.De4RBRN1la0WSh1yar6Q button {\r\n  position: relative;\r\n  font-size: 1rem;\r\n  color: white;\r\n  background: none;\r\n  border: none;\r\n}\r\n\r\n.De4RBRN1la0WSh1yar6Q button::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  height: 1px;\r\n  width: 100%;\r\n  background-color: white;\r\n  left: 0;\r\n  bottom: -5px;\r\n  transform: scale(0, 1);\r\n  transition: transform 0.25s ease;\r\n}\r\n\r\n.De4RBRN1la0WSh1yar6Q button:hover::before {\r\n  transform: scale(1, 1);\r\n}", "",{"version":3,"sources":["webpack://./src/styles/Header.module.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;EACtB,YAAY;EACZ,aAAa;EACb,eAAe;EACf,WAAW;AACb;;AAEA;EACE,iBAAiB;EACjB,cAAc;AAChB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,8BAA8B;AAChC;AACA;CACC,eAAe;AAChB;;AAEA;EACE,aAAa;EACb,WAAW;AACb;;AAEA;EACE,kBAAkB;EAClB,eAAe;EACf,YAAY;EACZ,gBAAgB;EAChB,YAAY;AACd;;AAEA;EACE,WAAW;EACX,kBAAkB;EAClB,WAAW;EACX,WAAW;EACX,uBAAuB;EACvB,OAAO;EACP,YAAY;EACZ,sBAAsB;EACtB,gCAAgC;AAClC;;AAEA;EACE,sBAAsB;AACxB","sourcesContent":[".header {\r\n  background: blueviolet;\r\n  color: white;\r\n  padding: 1rem;\r\n  position: fixed;\r\n  width: 100%;\r\n}\r\n\r\n.container {\r\n  max-width: 1500px;\r\n  margin: 0 auto;\r\n}\r\n\r\n.navContainer {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n}\r\n.navContainer h1 {\r\n font-size: 2rem;\r\n}\r\n\r\n.navContainer nav {\r\n  display: flex;\r\n  gap: 2.5rem;\r\n}\r\n\r\n.navContainer button {\r\n  position: relative;\r\n  font-size: 1rem;\r\n  color: white;\r\n  background: none;\r\n  border: none;\r\n}\r\n\r\n.navContainer button::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  height: 1px;\r\n  width: 100%;\r\n  background-color: white;\r\n  left: 0;\r\n  bottom: -5px;\r\n  transform: scale(0, 1);\r\n  transition: transform 0.25s ease;\r\n}\r\n\r\n.navContainer button:hover::before {\r\n  transform: scale(1, 1);\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".fu5wPeEeY19JO5Ykvtt9 {\r\n  background: blueviolet;\r\n  color: white;\r\n  padding: 1rem;\r\n  position: fixed;\r\n  width: 100%;\r\n}\r\n\r\n.Pe_Qka6g65LnVGsMOBcr {\r\n  max-width: 1500px;\r\n  margin: 0 auto;\r\n}\r\n\r\n.De4RBRN1la0WSh1yar6Q {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n}\r\n.De4RBRN1la0WSh1yar6Q h1 {\r\n font-size: 2rem;\r\n}\r\n\r\n.De4RBRN1la0WSh1yar6Q nav {\r\n  display: flex;\r\n  gap: 2.5rem;\r\n}\r\n\r\n.De4RBRN1la0WSh1yar6Q button {\r\n  position: relative;\r\n  font-size: 1rem;\r\n  color: white;\r\n  background: none;\r\n  border: none;\r\n}\r\n\r\n.De4RBRN1la0WSh1yar6Q button:not(.stxWnO4r0VlpX3rdsnSP)::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  height: 1px;\r\n  width: 100%;\r\n  background-color: white;\r\n  left: 0;\r\n  bottom: -5px;\r\n  transform: scale(0, 1);\r\n  transition: transform 0.25s ease;\r\n}\r\n\r\n.De4RBRN1la0WSh1yar6Q button:not(.stxWnO4r0VlpX3rdsnSP):hover::before {\r\n  transform: scale(1, 1);\r\n}\r\n\r\n.De4RBRN1la0WSh1yar6Q button.stxWnO4r0VlpX3rdsnSP::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  height: 1px;\r\n  width: 100%;\r\n  background: white;\r\n  left: 0;\r\n  bottom: -5px;\r\n  transform: scale(1, 1);\r\n  transition: transform 0.25s ease;\r\n}", "",{"version":3,"sources":["webpack://./src/styles/Header.module.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;EACtB,YAAY;EACZ,aAAa;EACb,eAAe;EACf,WAAW;AACb;;AAEA;EACE,iBAAiB;EACjB,cAAc;AAChB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,8BAA8B;AAChC;AACA;CACC,eAAe;AAChB;;AAEA;EACE,aAAa;EACb,WAAW;AACb;;AAEA;EACE,kBAAkB;EAClB,eAAe;EACf,YAAY;EACZ,gBAAgB;EAChB,YAAY;AACd;;AAEA;EACE,WAAW;EACX,kBAAkB;EAClB,WAAW;EACX,WAAW;EACX,uBAAuB;EACvB,OAAO;EACP,YAAY;EACZ,sBAAsB;EACtB,gCAAgC;AAClC;;AAEA;EACE,sBAAsB;AACxB;;AAEA;EACE,WAAW;EACX,kBAAkB;EAClB,WAAW;EACX,WAAW;EACX,iBAAiB;EACjB,OAAO;EACP,YAAY;EACZ,sBAAsB;EACtB,gCAAgC;AAClC","sourcesContent":[".header {\r\n  background: blueviolet;\r\n  color: white;\r\n  padding: 1rem;\r\n  position: fixed;\r\n  width: 100%;\r\n}\r\n\r\n.container {\r\n  max-width: 1500px;\r\n  margin: 0 auto;\r\n}\r\n\r\n.navContainer {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n}\r\n.navContainer h1 {\r\n font-size: 2rem;\r\n}\r\n\r\n.navContainer nav {\r\n  display: flex;\r\n  gap: 2.5rem;\r\n}\r\n\r\n.navContainer button {\r\n  position: relative;\r\n  font-size: 1rem;\r\n  color: white;\r\n  background: none;\r\n  border: none;\r\n}\r\n\r\n.navContainer button:not(.activeClass)::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  height: 1px;\r\n  width: 100%;\r\n  background-color: white;\r\n  left: 0;\r\n  bottom: -5px;\r\n  transform: scale(0, 1);\r\n  transition: transform 0.25s ease;\r\n}\r\n\r\n.navContainer button:not(.activeClass):hover::before {\r\n  transform: scale(1, 1);\r\n}\r\n\r\n.navContainer button.activeClass::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  height: 1px;\r\n  width: 100%;\r\n  background: white;\r\n  left: 0;\r\n  bottom: -5px;\r\n  transform: scale(1, 1);\r\n  transition: transform 0.25s ease;\r\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"header": "fu5wPeEeY19JO5Ykvtt9",
 	"container": "Pe_Qka6g65LnVGsMOBcr",
-	"navContainer": "De4RBRN1la0WSh1yar6Q"
+	"navContainer": "De4RBRN1la0WSh1yar6Q",
+	"activeClass": "stxWnO4r0VlpX3rdsnSP"
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
