@@ -8,6 +8,7 @@ const Contact = () => {
   return (
     <div>
       <section ref={contactRef} id="contactPage" className={styles.container}>
+        <div className={styles.top}></div>
         <div className={styles.tab}>
           <div className={styles.contact}>
             <img className={styles.icon} src="/images/icons/email.png" />
