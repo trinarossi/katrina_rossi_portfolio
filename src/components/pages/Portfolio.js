@@ -15,7 +15,8 @@ const Portfolio = () => {
   return (
     <div>
       <section ref={portfolioRef} id="portfolioPage" className={styles.container}>
-        <h1 className={styles.title}>Portfolio</h1>
+        <h1 className={styles.header}>Portfolio</h1>
+        <h1 className={styles.title}>Web Development Projects</h1>
         <div className={styles.webDev}>
           <div className={styles.galleryHouse}>
             <img className={styles.projectImg} src="/images/galleryhouse.png" />
@@ -33,11 +34,11 @@ const Portfolio = () => {
         <div className={styles.slideshows}>
           <div className={styles.graphicDesign}>
             <SlidingGallery imgArr={gdImgs} />
-            <h2>Graphic Design</h2>
+            <h2 className={styles.slideshowTitle}>Graphic Design</h2>
           </div>
           <div className={styles.illustrations}>
             <SlidingGallery imgArr={gdImgs} />
-            <h2>Illustrations</h2>
+            <h2 className={styles.slideshowTitle}>Illustrations</h2>
           </div>
         </div>
       </section>
