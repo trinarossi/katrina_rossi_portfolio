@@ -1,0 +1,43 @@
+.container {
+  height: 100vh;
+  background-image: url("../../public/images/starry-sky-v2.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tab {
+  max-width: 80rem;
+  position: relative;
+}
+
+.trinaContainer {
+  max-width: 30rem;
+  position: absolute;
+  top: 28.5%;
+  left: 34%;
+}
+
+.trina {
+  height: 100%;
+  width: 100%;
+  border: 10px solid;
+  border-image-slice: 1;
+  --angle: 0deg;
+  /* … */
+  border-image: linear-gradient(var(--angle), aqua,#3B1B72, #ff17f7) 1;
+  animation: 8s rotate linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}

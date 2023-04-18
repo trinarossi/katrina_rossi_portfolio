@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: white;
+}
+
+.slideshows {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 15rem;
+}
+
+.webDev {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.projectImg {
+  max-width: 25rem;
+}
+
+.galleryHouse, .studyBuddies, .puzzleShop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+}

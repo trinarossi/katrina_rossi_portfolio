@@ -1,0 +1,8 @@
+.container {
+  height: 100vh;
+  background-image: url("../../public/images/starry-sky-v2.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

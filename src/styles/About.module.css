@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: white;
+}
+
+.headshot {
+  max-width: 20rem;
+}
+
+.right, .left {
+  border: solid black 2px;
+}
+
+.left {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.toolbox {
+  max-width: 50rem;
+}
+
+.gh {
+  display: flex;
+}
+
+.ghIcon {
+  max-width: 5rem;
+}
