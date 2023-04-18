@@ -28,7 +28,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.navContainer}>
-          <h1>Katrina Rossi</h1>
+          <img className={styles.signature} src="/images/signature.png" />
           <nav>
             {navLinks.map((nav) => renderNavLink(nav))}
           </nav>

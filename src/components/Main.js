@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import Footer from "./Footer";
 import { Routes, Route } from "react-router-dom";
 import { Home } from "./index";
 import { About } from "./index";
@@ -16,6 +17,7 @@ const Main = () => {
         <About />
         <Portfolio />
         <Contact />
+        <Footer />
       </NavProvider>
     </div>
   );
