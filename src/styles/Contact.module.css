@@ -6,3 +6,53 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.tab {
+  background-image: url("../../public/images/contact-tab.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 70rem;
+  width: 90rem;
+  background-size: contain;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 4rem;
+  position: relative;
+}
+
+.icon {
+  max-width: 7rem;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 20rem;
+  gap: 2rem;
+  font-size: 1.25rem;
+}
+
+.contact a:link {
+  text-decoration: none;
+}
+
+.contact a:visited {
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+
+}
+
+.contact a:active {
+  text-decoration: none;
+}
+
+.thanks {
+  max-width: 35rem;
+  position: absolute;
+  bottom: 15%;
+}
