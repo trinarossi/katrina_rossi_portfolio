@@ -15,8 +15,10 @@ const Portfolio = () => {
   return (
     <div>
       <section ref={portfolioRef} id="portfolioPage" className={styles.container}>
-        <h1 className={styles.header}>Portfolio</h1>
-        <h1 className={styles.title}>Web Development Projects</h1>
+        <div className={styles.header}>
+          <h1>Portfolio</h1>
+        <h2 className={styles.title}>Web Development Projects</h2>
+        </div>
         <div className={styles.webDev}>
           <div className={styles.galleryHouse}>
             <img className={styles.projectImg} src="/images/galleryhouse.png" />
@@ -26,10 +28,10 @@ const Portfolio = () => {
             <img className={styles.projectImg} src="/images/studybuddies.gif" />
             <h2>Study Buddies</h2>
           </div>
-          <div className={styles.puzzleShop}>
+          {/* <div className={styles.puzzleShop}>
             <img className={styles.projectImg} src="/images/puzzles.png" />
             <h2>Puzzle Shop</h2>
-          </div>
+          </div> */}
         </div>
         <div className={styles.slideshows}>
           <div className={styles.graphicDesign}>

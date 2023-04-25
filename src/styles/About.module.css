@@ -2,42 +2,43 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: white;
+  background-color: #c0d29a;
+  gap: 6rem;
+  height: 60vh;
+  padding: 0 3rem 0 3rem;
+  position: relative;
+  z-index: 50;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 25%;
+  gap: 10rem;
+}
+
+.aboutText {
+  width: 50rem;
 }
 
 .headshot {
-  max-width: 20rem;
+  max-width: 25rem;
 }
 
-.right, .left {
-  border: solid black 2px;
+.container h1 {
+  font-size: 2rem;
+  font-weight: bolder;
+  text-decoration: underline;
+  margin-bottom: 1rem;
 }
 
-.left {
-  width: 35%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.right {
-  width: 65%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.toolbox {
-  max-width: 50rem;
-}
-
-.gh {
-  display: flex;
-}
-
-.ghIcon {
-  max-width: 5rem;
+.cliff {
+  position: absolute;
+  bottom: -10%;
+  background-image: url("../../public/images/cliff.png");
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 22rem;
 }

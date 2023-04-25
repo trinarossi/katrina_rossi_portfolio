@@ -3,9 +3,10 @@
   height: 3rem;
   position: fixed;
   bottom: 0;
-  background-color: #3B1B72;
+  background-color: #c5292d;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
+  z-index: 80;
 }

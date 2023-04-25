@@ -1,70 +1,187 @@
 .container {
   height: 100vh;
-  background-image: url("../../public/images/starry-sky-v2.jpg");
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: relative;
-}
-
-.tab {
-  background-image: url("../../public/images/empty-tab.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 70rem;
-  width: 90rem;
-  background-size: contain;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.trinaContainer {
-  max-width: 33rem;
-  margin-top: 1rem;
-}
-
-.trina {
-  height: 100%;
   width: 100%;
-  border: 10px solid;
-  border-image-slice: 1;
-  --angle: 0deg;
-  /* … */
-  border-image: linear-gradient(var(--angle), aqua,#3B1B72, #ff17f7) 1;
-  animation: 8s rotate linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  animation: lighten 24s ease forwards;
 }
 
-@keyframes rotate {
-  to {
-    --angle: 360deg;
+@keyframes lighten
+{
+0%
+{
+background-color: #73acbc;
+}
+100%{
+background-color: #a3ebfa;
+}  
+}
+
+.text {
+  position: absolute;
+  left: 15%;
+  top: 45%;
+  z-index: 70;
+}
+
+.text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hill1, .hill2, .hill3 {
+  position: absolute;
+  /* background-size: 2000px 100px; */
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100%;
+  height: 35rem;
+}
+
+.hill1 {
+  bottom: 0;
+  left: 0;
+  background-image: url("../../public/images/hills.png");
+  animation: ani_hill 5s ease forwards;
+  z-index: 70;
+}
+/* 
+.hill2 {
+  bottom: 0;
+  left: 0;
+  background-image: url("../../public/images/ani-hill2.png");
+  animation: ani_hill 5s ease forwards;
+  z-index: 50;
+}
+
+.hill3 {
+  bottom: 0;
+  left: 0;
+  background-image: url("../../public/images/ani-hill3.png");
+  animation: ani_hill 5s ease forwards;
+  z-index: 40;
+} */
+
+@keyframes ani_hill {
+  0% {
+    background-position-y: 2000px;
+  }
+  100% {
+    background-position-y: 100%;
   }
 }
 
-@property --angle {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: false;
-}
-
-.banner {
-  max-width: 65rem;
-}
-
-.hiThere {
-  max-width: 20rem;
-  position: absolute;
-  top: 20%;
-  left: 13%;
-}
-
-.bottom {
+/* .banner {
   width: 100%;
-  height: 6rem;
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.7693452380952381) 62%, rgba(255,255,255,0) 100%);
+  height: 5rem;
+  position: absolute;
+  top: 0;
+  background: linear-gradient(0deg, rgba(255, 255, 255,0) 0%, rgba(255, 255, 255,0.7693452380952381) 38%, rgba(255, 255, 255,1) 100%);
+} */
+
+.clouds {
   position: absolute;
   bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform: rotate(180deg);
+  z-index: 70;
+}
+
+.clouds img {
+  position: absolute;
+  bottom: -10%;
+  max-width: 100%;
+}
+
+@keyframes animate
+{
+  0%
+  {
+    transform: translateX(-100%);
+  }
+  100%
+  {
+    transform: translateX(100%);
+  }
+}
+
+.cloud1 {
+  animation: animate 16s linear infinite;
+}
+
+.cloud2 {
+  animation: animate 18s linear infinite;
+}
+
+.cloud3 {
+  animation: animate 24s linear infinite;
+}
+
+.cloud4 {
+  animation: animate 22s linear infinite;
+}
+
+.cloud5 {
+  animation: animate 20s linear infinite;
+}
+
+.light, .sun {
+  position: absolute;
+}
+
+
+.sun {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  right: 25%;
+  z-index: 30;
+  background: linear-gradient(#ff0, rgb(221, 114, 0));
+  box-shadow: 0 0 40px 6px #f20, 0 0 150px 10px #f33;
+  animation: rise 24s ease forwards;
+}
+
+@keyframes rise {
+  0% {
+    top: 110%;
+    /* background: linear-gradient(#ff0, #d00); */
+    /* box-shadow: 0 0 40px 6px #f20, 0 0 150px 10px #f33; */
+  }
+  100% {
+    top: 15%;
+    /* background: linear-gradient(#ff0, rgb(221, 114, 0)); */
+    /* box-shadow: 0 0 40px 6px rgb(255, 187, 0), 0 0rgb(255, 243, 243)px 10px rgb(255, 233, 205); */
+  }
+}
+
+.light {
+  opacity: .5;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(at 70% 20%, #ff0, transparent);
+  z-index: 60;
+  animation: over 24s ease forwards;
+}
+
+@keyframes over {
+  0% {
+    opacity: 0
+  }
+  ;
+  100% {
+    opacity: .2
+  }
+  ;
 }
