@@ -6,7 +6,7 @@ const Header = () => {
   const { activeLinkId } = useContext(NavContext);
   console.log(activeLinkId);
 
-  const navLinks = ["Home", "About", "Skills", "Portfolio", "Contact"];
+  const navLinks = ["Home", "About", "Portfolio", "Contact"];
   
   const renderNavLink = (content) => {
     const scrollToId = `${content.toLowerCase()}Page`;

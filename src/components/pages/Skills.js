@@ -8,7 +8,7 @@ const Skills = () => {
   return (
     <div>
       <section ref={skillsRef} id="skillsPage" className={styles.container}>
-      <div className={styles.right}>
+        <div className={styles.right}>
           <h1>Education</h1>
           <div className={styles.gh}>
             <img className={styles.ghIcon} src="/images/gh.png" />
@@ -22,7 +22,7 @@ const Skills = () => {
               </p>
             </div>
           </div>
-        </div>  
+        </div>
       </section>
     </div>
   );

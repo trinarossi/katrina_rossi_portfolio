@@ -1,6 +1,6 @@
 .container {
-  height: 80vh;
-  background: #c0d29a;
+  height: 100vh;
+  background: linear-gradient(180deg, rgba(192,210,154,1) 0%, rgba(131,170,110,1) 100%);
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,42 +1,35 @@
 .container {
-  height: 100vh;
-  background: #c0d29a;
+  height: 65vh;
+  background: #9ECED4;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   position: relative;
+  padding: 2rem 4rem 2rem 4rem;
+}
+
+.container h1 {
+  font-size: 2rem;
+  font-weight: bolder;
+  text-decoration: underline;
+  margin-bottom: 1rem;
 }
 
 .icon {
-  max-width: 5rem;
+  max-width: 3rem;
 }
-/* 
-.contact {
+
+.icon2 {
+  max-width: 2.5rem;
+}
+
+.links {
+  margin-top: 1rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  flex-direction: column;
-  width: 20rem;
   gap: 2rem;
-  font-size: 1.25rem;
 }
-
-.contact a:link {
-  text-decoration: none;
-}
-
-.contact a:visited {
-  text-decoration: none;
-}
-
-.contact a:hover {
-  text-decoration: underline;
-
-}
-
-.contact a:active {
-  text-decoration: none;
-} */
 
 .left {
   width: 60%;
@@ -44,35 +37,42 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  gap: 3rem;
 }
 
-.emailForm {
-  width: 40rem;
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .emailForm form {
- margin: 5rem;
  display: flex;
  flex-direction: column;
  align-items: flex-start;
  font-size: 1.5rem;
- color: white;
+ color: black;
 }
 
 .emailForm input, .emailForm textarea {
   margin-bottom: 1rem;
   margin-top: .5rem;
-  border-right: solid 5px #c5292d;
-  border-bottom: solid 5px #c5292d;
+  border-right: solid 5px black;
+  border-bottom: solid 5px black;
 }
 
 .emailForm input {
+  font-size: 1.5rem;
+  padding-left: .5rem;
   height: 4rem;
   width: 40rem;
 
 }
 
 .emailForm textarea {
+  font-size: 1.25rem;
+  padding: .5rem;
   height: 16rem;
   width: 40rem;
 }
@@ -80,29 +80,41 @@
 .contactText {
   max-width: 40rem;
   text-align: left;
-  padding-left: 5rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   z-index: 60;
-}
-
-.contactText img {
-  max-width: 3rem;
+  position: relative;
 }
 
 .email {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.trench {
-  position: absolute;
-  top: -1%;
-  background: linear-gradient(0deg, rgba(88,201,233,0) 0%, rgba(88,201,233,0.6194852941176471) 43%, rgba(88,201,233,0.9164040616246498) 71%, rgba(88,201,233,1) 100%);
-  background-size: cover;
-  background-position: bottom;
-  width: 100%;
-  height: 10rem;
-  z-index: 40;
-}    
+.email img {
+  max-width: 3rem;
+}
+
+/* .bye {
+  background-image: url("../../public/images/poppies.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 30rem;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.bye p {
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+.submit {
+  background-color: rgb(242, 232, 120);
+}
