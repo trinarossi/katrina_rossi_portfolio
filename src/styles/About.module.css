@@ -4,8 +4,8 @@
   align-items: center;
   justify-content: flex-start;
   background: linear-gradient(180deg, rgba(82,131,137,1) 0%, rgba(119,168,174,1) 100%);
-  height: 100vh;
-  gap: 6rem;
+  height: 105vh;
+  gap: 10rem;
   padding: 4rem 3rem 0 3rem;
   position: relative;
   z-index: 50;
@@ -89,6 +89,9 @@
 
 .techStack {
   position: relative;
+  background-color: rgb(55, 88, 93, .5);
+  padding: 2rem 3rem 2rem 3rem;
+  border-radius: 5rem;
 }
 
 .techStack h1 {
@@ -127,7 +130,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 5rem;
   gap: 1rem;
 }
 

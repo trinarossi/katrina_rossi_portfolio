@@ -34,9 +34,10 @@ const Contact = () => {
         {/* <div className={styles.trench}></div> */}
         <section className={styles.left}>
           <div className={styles.contactText}>
-            <h1>Contact</h1>
+            <h1 className={styles.title}>Contact</h1>
+            <h2>I'd love to hear from you!</h2>
             <h2>
-              I'd love to hear from you! Please feel free to fill out this form
+              Please feel free to fill out this form
               to ask for my resume, share ideas to collaborate on, or just say
               "hey!"
             </h2>

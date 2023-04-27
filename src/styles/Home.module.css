@@ -14,10 +14,14 @@
 {
 0%
 {
-background-color: #154977;
+background-color: #b03302;
+}
+50%
+{
+background-color: #e0c034;
 }
 100%{
-background-color: #64deff;
+background-color: #84e1eb;
 }  
 }
 
@@ -186,11 +190,12 @@ background-color: #64deff;
 
 @keyframes over {
   0% {
+    background: radial-gradient(at 70% 20%, #ff0, transparent);
     opacity: 0
   }
-  ;
   100% {
-    opacity: .2
+    background: radial-gradient(at 70% 20%, rgb(251, 251, 228), transparent);
+    opacity: .3
   }
   ;
 }

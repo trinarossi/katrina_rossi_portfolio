@@ -2,19 +2,42 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 12rem;
-  height: 140vh;
+  gap: 15rem;
+  height: 200vh;
   background: #77A8AE;
   position: relative;
 }
 
+.top {
+  margin-top: 5rem;
+}
 
+.header {
+  color: rgb(234, 224, 113);
+  font-family: 'EB Garamond', serif;
+  font-size: 2rem;
+  text-align: center;
+  margin: 6rem 0 3rem 0;
+}
 
 .slideshows {
   display: flex;
   justify-content: center;
   align-content: center;
-  gap: 15rem;
+  gap: 6rem;
+}
+
+.logos, .bf {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.logos {
+  gap: 17rem;
 }
 
 .webDev {
@@ -23,7 +46,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
   height: 45rem;
   width: 75rem;
 }
@@ -40,23 +63,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 3rem;
 }
 
 .galleryHouse {
-  margin-top: 6rem;
+  margin-top: 12rem;
 }
-
-/* .header {
-  position: absolute;
-  top: 12%;
-  left: 42%;
-  font-family: 'EB Garamond', serif;
-  font-size: 2rem;
-} */
 
 .title {
   position: absolute;
-  top: 7%;
+  top: 5%;
   left: 12%;
   text-decoration: underline;
   font-size: 2rem;
@@ -69,4 +85,25 @@
 .slideshowTitle {
   text-align: center;
   margin: 1rem 0 4rem 0;
+}
+
+.projectText {
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.projectText button {
+  width: 10rem;
+  height: 3rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.projectText p {
+  font-size: 1.15rem;
 }
