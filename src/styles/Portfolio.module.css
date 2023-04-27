@@ -48,7 +48,7 @@
   align-items: center;
   gap: 4rem;
   height: 45rem;
-  width: 75rem;
+  max-width: 75rem;
 }
 
 .projectImg1 {
@@ -106,4 +106,29 @@
 
 .projectText p {
   font-size: 1.15rem;
+}
+
+@media only screen and (max-width: 40em) { 
+  .container {
+    height: 300vh;
+  }
+  .container p {
+    font-size: 1rem;
+  }
+  .container h1 {
+    font-size: 1.5rem;
+  }
+  .header {
+    font-size: 1.5rem;
+  }
+  .projectImg1 {
+    max-width: 13rem;
+  }
+  
+  .projectImg2 {
+    max-width: 15rem;
+  }
+  .galleryHouse, .studyBuddies {
+    flex-direction: column;
+  }
 }
