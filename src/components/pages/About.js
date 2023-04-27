@@ -100,7 +100,7 @@ const About = () => {
                   src="/images/icons/adobe-suite.png"
                   className={styles.icon}
                 />
-                <p className={styles.buggy}>Adobe Suite</p>
+                <p>Adobe Suite</p>
               </div>
             </div>
           </div>

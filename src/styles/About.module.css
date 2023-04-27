@@ -170,6 +170,7 @@
 }
 .techStack {
   padding: 1rem;
+  text-align: center;
 }
 .icon {
   max-width: 2.5rem;
@@ -178,9 +179,6 @@
   margin-top: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-}
-.buggy {
-  padding-left: 1rem;
 }
 .progress {
   align-items: center;
