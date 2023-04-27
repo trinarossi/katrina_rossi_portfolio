@@ -23,10 +23,7 @@ const Home = () => {
           </h2>
           <h2>lover of warm breezes on sunny days.</h2>
         </div>
-        <div className={styles.hills}>
-          {/* <div className={styles.hill1}></div>
-          <div className={styles.hill2}></div>
-          <div className={styles.hill3}></div> */}
+        <div className={styles.waves}>
         </div>
         <div className={styles.light}></div>
         <div className={styles.sun}></div>

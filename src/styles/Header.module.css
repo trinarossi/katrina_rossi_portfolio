@@ -67,3 +67,9 @@
 .signature {
   width: 15rem;
 }
+
+@media only screen and (max-width: 40em) { 
+  .signature {
+    width: 10rem;
+  }
+}
