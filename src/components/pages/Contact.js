@@ -32,7 +32,7 @@ const Contact = () => {
     <div>
       <section ref={contactRef} id="contactPage" className={styles.container}>
         {/* <div className={styles.trench}></div> */}
-        <section className={styles.left}>
+        <div className={styles.left}>
           <div className={styles.contactText}>
             <h1 className={styles.title}>Contact</h1>
             <h2>I'd love to hear from you!</h2>
@@ -66,11 +66,8 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className={styles.bye}>
-            <p>Thanks for stopping by!</p>
-          </div>
-        </section>
-        <section className={styles.right}>
+        </div>
+        <div className={styles.right}>
           {/* <div className={styles.email}>
             <img src="/images/icons/email.png" />
             <p>katrinarossidev@gmail.com</p>
@@ -86,7 +83,10 @@ const Contact = () => {
               <input className={styles.submit} type="submit" value="Send" />
             </form>
           </div>
-        </section>
+          {/* <div className={styles.bye}>
+            <p>Thanks for stopping by!</p>
+          </div> */}
+        </div>
       </section>
     </div>
   );

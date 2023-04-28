@@ -34,3 +34,12 @@
 .slideshowDot.active {
   background-color: #3B1B72;
 }
+
+@media only screen and (max-width: 40em) {
+.slideshow {
+  max-width: 15rem;
+}
+.slide {
+  max-width: 15rem;
+}
+}

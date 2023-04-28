@@ -61,6 +61,10 @@ const Portfolio = () => {
               </div>
             </div>
             <div className={styles.studyBuddies}>
+              <img
+                className={styles.projectImg2}
+                src="/images/studybuddies.png"
+              />
               <div className={styles.projectText}>
                 <h2>Study Buddies</h2>
                 <p>
@@ -79,25 +83,21 @@ const Portfolio = () => {
                   <button>View Github Repo</button>
                 </a>
               </div>
-              <img
-                className={styles.projectImg2}
-                src="/images/studybuddies.png"
-              />
             </div>
           </div>
         </div>
-        <div>
-        <h2 className={styles.header}>Graphic Design</h2>
-        <div className={styles.slideshows}>
-          <div className={styles.bf}>
-          <h2 className={styles.slideshowTitle}>Invitations & Brochures</h2>
-            <SlidingGallery1 imgArr={gdBFImgs} />
+        <div className={styles.graphicDesign}>
+          <h2 className={styles.header}>Graphic Design</h2>
+          <div className={styles.slideshows}>
+            <div className={styles.bf}>
+              <h2 className={styles.slideshowTitle}>Invitations & Brochures</h2>
+              <SlidingGallery1 imgArr={gdBFImgs} />
+            </div>
+            <div className={styles.logos}>
+              <h2 className={styles.slideshowTitle}>Logos</h2>
+              <SlidingGallery2 imgArr={gdLogoImgs} />
+            </div>
           </div>
-          <div className={styles.logos}>
-          <h2 className={styles.slideshowTitle}>Logos</h2>
-            <SlidingGallery2 imgArr={gdLogoImgs}/>
-          </div>
-        </div>
         </div>
       </section>
     </div>

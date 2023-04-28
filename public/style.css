@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
+  
 }
 
 ul {
@@ -11,6 +12,10 @@ ul {
 
 .container {
   width: 100%;
+  
+}
+
+section {
   overflow-x: hidden;
 }
 

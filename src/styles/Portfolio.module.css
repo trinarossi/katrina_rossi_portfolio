@@ -88,7 +88,7 @@
 }
 
 .projectText {
-  width: 35rem;
+  max-width: 35rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -110,7 +110,7 @@
 
 @media only screen and (max-width: 40em) { 
   .container {
-    height: 300vh;
+    height: 310vh;
   }
   .container p {
     font-size: 1rem;
@@ -122,7 +122,7 @@
     font-size: 1.5rem;
   }
   .projectImg1 {
-    max-width: 13rem;
+    max-width: 14rem;
   }
   
   .projectImg2 {
@@ -130,5 +130,21 @@
   }
   .galleryHouse, .studyBuddies {
     flex-direction: column;
+  }
+  .projectText {
+    padding: 2rem;
+  }
+  .galleryHouse {
+    margin-top: 25rem;
+  }
+  .slideshows {
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .bf, .logos {
+    gap: 0;
+  }
+  .graphicDesign {
+    margin-top: 14rem;
   }
 }

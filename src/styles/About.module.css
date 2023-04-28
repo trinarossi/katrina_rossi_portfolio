@@ -140,7 +140,7 @@
 
 @media only screen and (max-width: 40em) {
 .container {
-  height: 185vh;
+  height: 180vh;
   gap: 2rem;
   padding: 1.5rem 2rem 0 2rem;
 }
