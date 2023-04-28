@@ -140,7 +140,7 @@
 
 @media only screen and (max-width: 40em) {
 .container {
-  height: 180vh;
+  height: 190vh;
   gap: 2rem;
   padding: 1.5rem 2rem 0 2rem;
 }
@@ -171,6 +171,7 @@
 }
 .techStack {
   padding: 1rem;
+  border-radius: 2rem;
   text-align: center;
 }
 .icon {

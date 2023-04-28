@@ -7,6 +7,7 @@
   flex-direction: column;
   position: relative;
   animation: lighten 24s ease forwards;
+  overflow: hidden;
 }
 
 @keyframes lighten
@@ -182,7 +183,7 @@ background-color: #84e1eb;
   }
   .text {
     left: 10%;
-    top: 60%;
+    top: 58%;
     max-width: 15rem;
   }
   .text h1 {

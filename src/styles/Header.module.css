@@ -8,6 +8,10 @@
   height: 4.25rem;
 }
 
+.mobileNav {
+  display:none;
+}
+
 .container {
   max-width: 1500px;
   margin: 0 auto;
@@ -70,6 +74,16 @@
 
 @media only screen and (max-width: 40em) { 
   .signature {
-    width: 10rem;
+    width: 11rem;
+    margin-right: .5rem;
+  }
+  .navContainer nav {
+    display: none;
+  }
+  .mobileNav {
+    display: block;
+    min-width: 5rem;
+    max-width: 6rem;
+    margin-right: .5rem;
   }
 }
