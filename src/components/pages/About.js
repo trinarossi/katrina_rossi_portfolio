@@ -10,13 +10,13 @@ const About = () => {
   return (
     <div>
       <section ref={aboutRef} id="aboutPage" className={styles.container}>
-        <h1 className={styles.title}>About</h1>
+        {/* <h1 className={styles.title}>About</h1> */}
         <div className={styles.about}>
           <div className={styles.aboutLeft}>
             {/* <h1>About</h1> */}
-            <img className={styles.headshot} src="/images/trina-sunset.png" />
+            <img className={styles.headshot} src="/images/trina-circle.png" />
             <div className={styles.aboutText}>
-              <h2 className={styles.header}>Nice to Meet You!</h2>
+              {/* <h2 className={styles.header}>Nice to Meet You!</h2> */}
             </div>
           </div>
           <div className={styles.aboutRight}>
@@ -37,15 +37,15 @@ const About = () => {
             <div className={styles.right}>
               <h2 className={styles.header}>Education</h2>
               <div className={styles.gh}>
-                <div className={styles.ghText}>
+                <div className={styles.ghHeader}>
                   <h2>The Grace Hopper Program Web Development Bootcamp</h2>
                   <h2 className={styles.date}>11/22 - 04/23</h2>
-                  <p>
-                    Full-time, immersive web development program designed to
-                    equip students with the skills necessary to build full stack
-                    web applications.
-                  </p>
                 </div>
+                <p>
+                  Full-time, immersive web development program designed to equip
+                  students with the skills necessary to build full stack web
+                  applications.
+                </p>
               </div>
             </div>
           </div>
@@ -53,7 +53,6 @@ const About = () => {
         <div className={styles.techStack}>
           <h1>My Toolbox</h1>
           <div className={styles.toolBox}>
-            <div className={styles.tbTop}>
               <div className={styles.tool}>
                 <img src="/images/icons/postgres.png" className={styles.icon} />
                 <p>Postgres</p>
@@ -70,8 +69,13 @@ const About = () => {
                 <img src="/images/icons/node.png" className={styles.icon} />
                 <p>Node</p>
               </div>
-            </div>
-            <div className={styles.tbBottom}>
+              <div className={styles.tool}>
+                <img
+                  src="/images/icons/adobe-suite.png"
+                  className={styles.icon}
+                />
+                <p>Adobe Suite</p>
+              </div>
               <div className={styles.tool}>
                 <img src="/images/icons/html.png" className={styles.icon} />
                 <p>HTML5</p>
@@ -95,18 +99,15 @@ const About = () => {
                 <img src="/images/icons/github.png" className={styles.icon} />
                 <p>Github</p>
               </div>
-              <div className={styles.tool}>
-                <img
-                  src="/images/icons/adobe-suite.png"
-                  className={styles.icon}
-                />
-                <p>Adobe Suite</p>
-              </div>
-            </div>
           </div>
           <div className={styles.progress}>
-          <h2 className={styles.header}>What I'm Currently Working On: </h2>
-          <p>Improving both my general CSS and CSS Keyframes skills, further deepening my knowledge of React, and having fun learning React Native so that I can start developing mobile applications soon as well.</p>
+            <h2 className={styles.header}>What I'm Currently Working On: </h2>
+            <p>
+              Improving both my general CSS and CSS Keyframes skills, further
+              deepening my knowledge of React, and having fun learning React
+              Native so that I can start developing mobile applications soon as
+              well.
+            </p>
           </div>
         </div>
       </section>

@@ -38,7 +38,10 @@ const Portfolio = () => {
                 src="/images/gallery-house.png"
               />
               <div className={styles.projectText}>
-                <h2>Gallery House</h2>
+                <div className={styles.textHeader}>
+                  <h2>Gallery House</h2>
+                  <p>(In Progress)</p>
+                </div>
                 <p>
                   Beauty is in the eye of the beholder, but composition is a
                   science. Let us help you build the perfect gallery wall for
@@ -66,15 +69,12 @@ const Portfolio = () => {
                 src="/images/studybuddies.png"
               />
               <div className={styles.projectText}>
-                <h2>Study Buddies</h2>
+              <div className={styles.textHeader}>
+                  <h2>Study Buddies</h2>
+                  <p>(In Progress)</p>
+                </div>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Praesent at venenatis lacus. Etiam aliquam id odio sed
-                  suscipit. Proin imperdiet scelerisque orci eget ornare. In
-                  hendrerit sapien sit amet quam lobortis egestas. Suspendisse
-                  efficitur pellentesque risus, quis aliquet odio mollis ac.
-                  Mauris tincidunt nunc ex, at consectetur arcu interdum
-                  ullamcorper.
+                Study Buddies is the app developed to make learning fun for your elementary schooler! With Study Buddies a student can make an account with their parent or teacher, create their own pet, and earn points by correctly answering questions on flashcards curated for each grade level and subject. With these points your student can take care of their pet, customize its outfits, and furnish their pet’s home with fun decorations. Students’ pets can also visit their friends’ and classmates’ pets to leave messages and take in-game customized screenshots to share with each other. Put the fun back into your child’s learning with Study Buddies!
                 </p>
                 <a
                   href="https://github.com/trinarossi/Study-Buddies"

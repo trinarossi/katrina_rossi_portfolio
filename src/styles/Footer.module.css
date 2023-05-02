@@ -3,10 +3,22 @@
   height: 3rem;
   position: fixed;
   bottom: 0;
-  background-color: rgb(216, 56, 7);
+  background-color: #BA5A31;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   z-index: 80;
+}
+
+.container p {
+  font-family: 'EB Garamond', serif;
+  letter-spacing: .1rem;
+  font-size: 1.25rem;
+}
+
+@media only screen and (max-width: 40em) { 
+  .container p {
+  font-size: .75rem;
+}
 }

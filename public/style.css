@@ -16,8 +16,6 @@ ul {
 }
 
 section {
-  overflow-x: hidden;
-  overflow-y:visible;
-  height: 100%;
+overflow: hidden;
 }
 

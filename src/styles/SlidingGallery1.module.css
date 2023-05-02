@@ -43,3 +43,12 @@
   max-width: 15rem;
 }
 }
+
+@media screen and (min-device-width: 481px) and (orientation:portrait) {
+  .slideshow {
+    max-width: 23rem;
+  }
+  .slide {
+    max-width: 23rem;
+  }
+}

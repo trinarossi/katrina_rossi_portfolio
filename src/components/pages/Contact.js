@@ -31,7 +31,6 @@ const Contact = () => {
   return (
     <div>
       <section ref={contactRef} id="contactPage" className={styles.container}>
-        {/* <div className={styles.trench}></div> */}
         <div className={styles.left}>
           <div className={styles.contactText}>
             <h1 className={styles.title}>Contact</h1>

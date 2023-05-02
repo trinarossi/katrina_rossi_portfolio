@@ -4,8 +4,9 @@
   flex-direction: column;
   gap: 15rem;
   height: 200vh;
-  background: #77A8AE;
+  background: #E59F71;
   position: relative;
+  padding: 2rem;
 }
 
 .top {
@@ -13,11 +14,28 @@
 }
 
 .header {
-  color: rgb(234, 224, 113);
-  font-family: 'EB Garamond', serif;
+  text-decoration: underline;
   font-size: 2rem;
-  text-align: center;
-  margin: 6rem 0 3rem 0;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  color: #C1292E;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-family: 'EB Garamond', serif;
+  margin: 8rem 0 5rem 4rem;
+}
+
+.textHeader {
+  display: flex;
+  align-items: first baseline;
+  gap: .75rem;
+}
+
+.textHeader p {
+  font-family: 'EB Garamond', serif;
+  letter-spacing: .1rem;
+  font-size: .9rem;
+  font-style: italic;
 }
 
 .slideshows {
@@ -78,13 +96,17 @@
   font-size: 2rem;
   font-weight: bolder;
   margin-bottom: 1rem;
-  color: white;
+  color: #C1292E;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
   font-family: 'EB Garamond', serif;
 }
 
 .slideshowTitle {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.75rem;
   text-align: center;
-  margin: 1rem 0 4rem 0;
+  margin: 4rem 0 2rem 0;
 }
 
 .projectText {
@@ -102,15 +124,23 @@
   font-size: 1rem;
   border: none;
   cursor: pointer;
+  color: white;
+  background-color: #528389;
 }
 
 .projectText p {
   font-size: 1.15rem;
 }
 
+.projectText h2 {
+  letter-spacing: .2rem;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.75rem;
+}
+
 @media only screen and (max-width: 40em) { 
   .container {
-    height: 310vh;
+    height: 175rem;
   }
   .container p {
     font-size: 1rem;
@@ -118,8 +148,15 @@
   .container h1 {
     font-size: 1.5rem;
   }
+  .title {
+    position: absolute;
+    top: 3%;
+    left: 30%;
+  }
   .header {
     font-size: 1.5rem;
+    margin: 8rem 0 5rem 0rem;
+    text-align: center;
   }
   .projectImg1 {
     max-width: 14rem;
@@ -140,6 +177,59 @@
   .slideshows {
     flex-direction: column;
     gap: 5rem;
+  }
+  .slideshowTitle {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+  }
+  .bf, .logos {
+    gap: 0;
+  }
+  .graphicDesign {
+    margin-top: 14rem;
+  }
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 1000px) and (orientation:portrait) {
+  .container {
+    height: 200rem;
+  }
+  .title {
+    position: absolute;
+    top: 3%;
+  }
+  .header {
+    font-size: 2rem;
+    margin: 15rem 0 3rem 0rem;
+    text-align: center;
+  }
+  .projectImg1 {
+    max-width: 20rem;
+  }
+  
+  .projectImg2 {
+    max-width: 21rem;
+  }
+  .galleryHouse, .studyBuddies {
+    flex-direction: column;
+  }
+  .projectText {
+    padding: 2rem;
+  }
+  .galleryHouse {
+    margin-top: 33rem;
+  }
+  .slideshows {
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .slideshowTitle {
+    font-family: 'EB Garamond', serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 0 2rem 0;
   }
   .bf, .logos {
     gap: 0;

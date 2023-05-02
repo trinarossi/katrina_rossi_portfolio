@@ -48,13 +48,15 @@
 }
 
 .header {
-  color: rgb(234, 224, 113);
+  color: #E59F71;
+  letter-spacing: .2rem;
+  text-transform: uppercase; 
   font-family: 'EB Garamond', serif;
   font-size: 1.75rem;
 }
 
 .headshot {
-  max-width: 22rem;
+  max-width: 25rem;
 }
 
 .container h1 {
@@ -64,19 +66,24 @@
   font-family: 'EB Garamond', serif;
 }
 
-.gh {
+/* .gh {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.ghText {
+.gh {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: .5rem;
   margin-top: 1rem;
+}
+
+.ghHeader h2{
+  display: flex;
+  font-family: 'EB Garamond', serif;
 }
 
 .date {
@@ -105,6 +112,7 @@
   align-items: center;
   gap: 2rem;
   color: white;
+  margin-bottom: 1rem;
 }
 
 .tbBottom {
@@ -121,6 +129,14 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+.toolBox {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+    color: white;
 }
 
 .progress {
@@ -140,7 +156,7 @@
 
 @media only screen and (max-width: 40em) {
 .container {
-  height: 190vh;
+  height: 113rem;
   gap: 2rem;
   padding: 1.5rem 2rem 0 2rem;
 }
@@ -174,14 +190,15 @@
   border-radius: 2rem;
   text-align: center;
 }
-.icon {
-  max-width: 2.5rem;
-}
-.tbBottom {
+.toolBox {
   margin-top: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: .5rem;
+  gap: 1rem;
+  color: white;
+}
+.icon {
+  max-width: 2.5rem;
 }
 .progress {
   align-items: center;
@@ -189,4 +206,25 @@
 .progress p {
   padding-left: 1rem;
 }
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 1000px) and (orientation:portrait) {
+  .about {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .container {
+    height: 120rem;
+    gap: 4rem;
+    padding: 1.5rem 2rem 0 2rem;
+  }
+  .icon {
+    max-width: 4rem;
+  }
+  .toolBox {
+    text-align: center;
+  }
+  .techStack {
+    margin: 3rem 0 5rem 0;
+  }
 }

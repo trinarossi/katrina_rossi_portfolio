@@ -14,14 +14,10 @@
 {
 0%
 {
-background-color: #b03302;
-}
-50%
-{
-background-color: #e0c034;
+background-color: #BA5A31;
 }
 100%{
-background-color: #84e1eb;
+  background-color: #E59F71;
 }  
 }
 
@@ -49,9 +45,6 @@ background-color: #84e1eb;
   background-image: url("../../public/images/new-waves.png");
   animation: ani_waves 5s ease forwards;
   z-index: 70;
-}
-
-.waves {
   position: absolute;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -136,8 +129,8 @@ background-color: #84e1eb;
   border-radius: 50%;
   right: 25%;
   z-index: 30;
-  background: linear-gradient(#ff0, #d00);
-  box-shadow: 0 0 40px 6px #f20, 0 0 150px 10px #f33;
+  background: linear-gradient(rgb(249, 249, 100), rgb(222, 59, 4));
+  box-shadow: 0 0 40px 6px rgb(201, 70, 10), 0 0 150px 10px rgb(255, 65, 51);
   animation: rise 14s ease forwards;
 }
 
@@ -170,12 +163,13 @@ background-color: #84e1eb;
     opacity: 0
   }
   100% {
-    background: radial-gradient(at 70% 20%, rgb(251, 251, 228), transparent);
-    opacity: .3
+    background: radial-gradient(at 70% 20%, #ff0, transparent);
+    opacity: .4
   }
   ;
 }
 
+/* Small screens - MOBILE */
 @media only screen and (max-width: 40em) {
   .waves {
     background-image: url("../../public/images/m-waves.png");
@@ -203,3 +197,29 @@ background-color: #84e1eb;
     
   }
  }
+
+/* iPad Portrait */
+@media screen and (min-device-width: 481px) and (max-device-width: 1000px) and (orientation:portrait) {
+  .waves {
+    background-image: url("../../public/images/t-waves.png");
+    background-size: contain;
+  }
+  .text {
+    left: 10%;
+    top: 45%;
+    max-width: 25rem;
+  }
+  .text h1 {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+  }
+  .text h2 {
+    font-size: 1.75rem;
+  }
+  .sun {
+    width: 8rem;
+    height: 8rem;
+    right: 12%;
+  }
+}
+ 
