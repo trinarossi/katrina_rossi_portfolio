@@ -6,7 +6,6 @@ import 'react-dropdown/style.css';
 
 const Header = () => {
   const { activeLinkId } = useContext(NavContext);
-  console.log(activeLinkId);
   const [selectedOption, setSelectedOption] = useState(null);
 
   const navLinks = ["Home", "About", "Portfolio", "Contact"];

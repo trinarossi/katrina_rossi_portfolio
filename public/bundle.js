@@ -4344,7 +4344,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var Header = function Header() {
   var _useContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_context_NavProvider__WEBPACK_IMPORTED_MODULE_1__.NavContext),
     activeLinkId = _useContext.activeLinkId;
-  console.log(activeLinkId);
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
     _useState2 = _slicedToArray(_useState, 2),
     selectedOption = _useState2[0],
