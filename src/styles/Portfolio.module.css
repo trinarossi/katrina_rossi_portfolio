@@ -3,7 +3,7 @@
   align-items: center;
   flex-direction: column;
   gap: 15rem;
-  height: 200vh;
+  height: 2850px;
   background: #E59F71;
   position: relative;
   padding: 2rem;
@@ -140,7 +140,7 @@
 
 @media only screen and (max-width: 40em) { 
   .container {
-    height: 175rem;
+    height: 2900px;
   }
   .container p {
     font-size: 1rem;
@@ -150,13 +150,23 @@
   }
   .title {
     position: absolute;
-    top: 3%;
+    top: 2%;
     left: 30%;
   }
   .header {
     font-size: 1.5rem;
-    margin: 8rem 0 5rem 0rem;
+    margin: 18rem 0 2rem 0rem;
     text-align: center;
+  }
+  .textHeader {
+    flex-direction: column;
+    gap: 0;
+  }
+  .textHeader h2 {
+    font-size: 1.5rem;
+  }
+  .textHeader p {
+    font-size: .9rem;
   }
   .projectImg1 {
     max-width: 14rem;
@@ -172,7 +182,7 @@
     padding: 2rem;
   }
   .galleryHouse {
-    margin-top: 25rem;
+    margin-top: 30rem;
   }
   .slideshows {
     flex-direction: column;

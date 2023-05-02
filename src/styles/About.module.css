@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: flex-start;
   background: linear-gradient(180deg, rgba(82,131,137,1) 0%, rgba(119,168,174,1) 100%);
-  height: 120vh;
+  height: 110rem;
   gap: 10rem;
   padding: 4rem 3rem 0 3rem;
   position: relative;
@@ -146,7 +146,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 10rem;
   gap: 1rem;
 }
 
@@ -202,6 +202,7 @@
 }
 .progress {
   align-items: center;
+  margin-top: 3rem;
 }
 .progress p {
   padding-left: 1rem;
