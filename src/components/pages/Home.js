@@ -8,14 +8,25 @@ const Home = () => {
   return (
     <div>
       <section ref={homeRef} id="homePage" className={styles.container}>
-        <div className={styles.tab}>
-          <img className={styles.hiThere} src="/images/hi-there.png"/>
-          <div className={styles.trinaContainer}>
-            <img className={styles.trina} src="/images/trina-no-border.png" />
-          </div>
-          <img className={styles.banner} src="/images/dev-des-banner.png"/>
+        {/* <div className={styles.banner}></div> */}
+        <div className={styles.clouds}>
+          <img src="/images/clouds/cloud1.png" className={styles.cloud1} />
+          <img src="/images/clouds/cloud2.png" className={styles.cloud2} />
+          <img src="/images/clouds/cloud3.png" className={styles.cloud3} />
+          <img src="/images/clouds/cloud4.png" className={styles.cloud4} />
+          <img src="/images/clouds/cloud5.png" className={styles.cloud5} />
         </div>
-        <div className={styles.bottom}></div>
+        <div className={styles.text}>
+          <h1>Hi, there! I'm Katrina.</h1>
+          <h2>
+            I'm a developer, designer, &
+          </h2>
+          <h2>lover of warm breezes on sunny days.</h2>
+        </div>
+        <div className={styles.waves}>
+        </div>
+        <div className={styles.light}></div>
+        <div className={styles.sun}></div>
       </section>
     </div>
   );

@@ -1,12 +1,22 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { NavContext } from "../context/NavProvider";
 import styles from "../styles/Header.module.css";
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 
 const Header = () => {
   const { activeLinkId } = useContext(NavContext);
   console.log(activeLinkId);
+  const [selectedOption, setSelectedOption] = useState(null);
 
   const navLinks = ["Home", "About", "Portfolio", "Contact"];
+
+  const navLinksMobile = [
+    { value: "Home", label: "Home"},
+    { value: "About", label: "About"},
+    { value: "Portfolio", label: "Portfolio"},
+    { value: "Contact", label: "Contact"}
+  ];
   
   const renderNavLink = (content) => {
     const scrollToId = `${content.toLowerCase()}Page`;
@@ -24,6 +34,19 @@ const Header = () => {
     )
   };
 
+  const RenderDropDown = () => {
+    const handleClickNav = (content) => {
+      const scrollToId = `${content.toLowerCase()}Page`;
+      document.getElementById(scrollToId).scrollIntoView({ behavior:"smooth" })
+    }
+
+    return (
+      <Dropdown options={navLinksMobile}  placeholder="Menu" onChange={ (option) => {
+        handleClickNav(option.value);
+      }} className={styles.mobileNav}/>
+    )
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -32,6 +55,7 @@ const Header = () => {
           <nav>
             {navLinks.map((nav) => renderNavLink(nav))}
           </nav>
+          <RenderDropDown />
         </div>
       </div>
     </header>

@@ -1,10 +1,15 @@
 .header {
-  background: #3B1B72;
+  background: #BA5A31;
   color: white;
   padding: 1rem;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 80;
+  height: 4.25rem;
+}
+
+.mobileNav {
+  display:none;
 }
 
 .container {
@@ -29,9 +34,12 @@
 .navContainer button {
   position: relative;
   font-size: 1rem;
+  letter-spacing: .2rem;
+  text-transform: uppercase; 
   color: white;
   background: none;
   border: none;
+  font-family: 'EB Garamond', serif;
 }
 
 .navContainer button:not(.activeClass)::before {
@@ -64,4 +72,20 @@
 
 .signature {
   width: 15rem;
+}
+
+@media only screen and (max-width: 40em) { 
+  .signature {
+    width: 11rem;
+    margin-right: .5rem;
+  }
+  .navContainer nav {
+    display: none;
+  }
+  .mobileNav {
+    display: block;
+    min-width: 5rem;
+    max-width: 6rem;
+    margin-right: .5rem;
+  }
 }

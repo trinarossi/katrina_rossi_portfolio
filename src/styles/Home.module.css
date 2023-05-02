@@ -1,70 +1,225 @@
 .container {
   height: 100vh;
-  background-image: url("../../public/images/starry-sky-v2.jpg");
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: relative;
-}
-
-.tab {
-  background-image: url("../../public/images/empty-tab.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 70rem;
-  width: 90rem;
-  background-size: contain;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.trinaContainer {
-  max-width: 33rem;
-  margin-top: 1rem;
-}
-
-.trina {
-  height: 100%;
   width: 100%;
-  border: 10px solid;
-  border-image-slice: 1;
-  --angle: 0deg;
-  /* … */
-  border-image: linear-gradient(var(--angle), aqua,#3B1B72, #ff17f7) 1;
-  animation: 8s rotate linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  animation: lighten 24s ease forwards;
+  overflow: hidden;
 }
 
-@keyframes rotate {
-  to {
-    --angle: 360deg;
+@keyframes lighten
+{
+0%
+{
+background-color: #BA5A31;
+}
+100%{
+  background-color: #E59F71;
+}  
+}
+
+.text {
+  position: absolute;
+  left: 15%;
+  top: 30%;
+  z-index: 70;
+}
+
+.text h1 {
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+  font-family: 'EB Garamond', serif;
+}
+
+.text h2 {
+  font-size: 2.5rem;
+  font-family: 'EB Garamond', serif;
+}
+
+.waves {
+  bottom: 0;
+  left: 0;
+  background-image: url("../../public/images/new-waves.png");
+  animation: ani_waves 5s ease forwards;
+  z-index: 70;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100%;
+  height: 50rem;
+}
+
+
+@keyframes ani_waves {
+  0% {
+    background-position-y: 2000px;
+  }
+  100% {
+    background-position-y: 100%;
   }
 }
 
-@property --angle {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: false;
-}
-
-.banner {
-  max-width: 65rem;
-}
-
-.hiThere {
-  max-width: 20rem;
-  position: absolute;
-  top: 20%;
-  left: 13%;
-}
-
-.bottom {
+/* .banner {
   width: 100%;
-  height: 6rem;
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.7693452380952381) 62%, rgba(255,255,255,0) 100%);
+  height: 5rem;
+  position: absolute;
+  top: 0;
+  background: linear-gradient(0deg, rgba(255, 255, 255,0) 0%, rgba(255, 255, 255,0.7693452380952381) 38%, rgba(255, 255, 255,1) 100%);
+} */
+
+.clouds {
   position: absolute;
   bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform: rotate(180deg);
+  z-index: 70;
 }
+
+.clouds img {
+  position: absolute;
+  bottom: -10%;
+  max-width: 100%;
+}
+
+@keyframes animate
+{
+  0%
+  {
+    transform: translateX(-100%);
+  }
+  100%
+  {
+    transform: translateX(100%);
+  }
+}
+
+.cloud1 {
+  animation: animate 16s linear infinite;
+}
+
+.cloud2 {
+  animation: animate 18s linear infinite;
+}
+
+.cloud3 {
+  animation: animate 24s linear infinite;
+}
+
+.cloud4 {
+  animation: animate 22s linear infinite;
+}
+
+.cloud5 {
+  animation: animate 20s linear infinite;
+}
+
+.light, .sun {
+  position: absolute;
+}
+
+
+.sun {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  right: 25%;
+  z-index: 30;
+  background: linear-gradient(rgb(249, 249, 100), rgb(222, 59, 4));
+  box-shadow: 0 0 40px 6px rgb(201, 70, 10), 0 0 150px 10px rgb(255, 65, 51);
+  animation: rise 14s ease forwards;
+}
+
+@keyframes rise {
+  0% {
+    top: 120%;
+    /* background: linear-gradient(#ff0, #d00); */
+    /* box-shadow: 0 0 40px 6px #f20, 0 0 150px 10px #f33; */
+  }
+  100% {
+    top: 15%;
+    /* background: linear-gradient(#ff0, rgb(221, 114, 0)); */
+    /* box-shadow: 0 0 40px 6px rgb(255, 187, 0), 0 0rgb(255, 243, 243)px 10px rgb(255, 233, 205); */
+  }
+}
+
+.light {
+  opacity: .5;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(at 70% 20%, #ff0, transparent);
+  z-index: 60;
+  animation: over 18s ease forwards;
+}
+
+@keyframes over {
+  0% {
+    background: radial-gradient(at 70% 20%, #ff0, transparent);
+    opacity: 0
+  }
+  100% {
+    background: radial-gradient(at 70% 20%, #ff0, transparent);
+    opacity: .4
+  }
+  ;
+}
+
+/* Small screens - MOBILE */
+@media only screen and (max-width: 40em) {
+  .waves {
+    background-image: url("../../public/images/m-waves.png");
+    background-size: contain;
+  }
+  .text {
+    left: 10%;
+    top: 58%;
+    max-width: 15rem;
+  }
+  .text h1 {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+  }
+  .text h2 {
+    font-size: 1.35rem;
+  }
+  .sun {
+    width: 7rem;
+    height: 7rem;
+    right: 12%;
+  }
+  .clouds img {
+    bottom: 7%;
+    
+  }
+ }
+
+/* iPad Portrait */
+@media screen and (min-device-width: 481px) and (max-device-width: 1000px) and (orientation:portrait) {
+  .waves {
+    background-image: url("../../public/images/t-waves.png");
+    background-size: contain;
+  }
+  .text {
+    left: 10%;
+    top: 45%;
+    max-width: 25rem;
+  }
+  .text h1 {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+  }
+  .text h2 {
+    font-size: 1.75rem;
+  }
+  .sun {
+    width: 8rem;
+    height: 8rem;
+    right: 12%;
+  }
+}
+ 
