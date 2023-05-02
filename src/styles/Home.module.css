@@ -1,5 +1,5 @@
 .container {
-  height: 100vh;
+  height: 90rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -46,6 +46,7 @@ background-color: #BA5A31;
   animation: ani_waves 5s ease forwards;
   z-index: 70;
   position: absolute;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
   width: 100%;
@@ -171,6 +172,9 @@ background-color: #BA5A31;
 
 /* Small screens - MOBILE */
 @media only screen and (max-width: 40em) {
+  .container {
+    height: 100vh;
+  }
   .waves {
     background-image: url("../../public/images/m-waves.png");
     background-size: contain;
@@ -200,6 +204,9 @@ background-color: #BA5A31;
 
 /* iPad Portrait */
 @media screen and (min-device-width: 481px) and (max-device-width: 1000px) and (orientation:portrait) {
+  .container {
+    height: 100vh;
+  }
   .waves {
     background-image: url("../../public/images/t-waves.png");
     background-size: contain;
