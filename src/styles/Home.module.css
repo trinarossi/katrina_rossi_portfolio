@@ -230,3 +230,16 @@ background-color: #BA5A31;
   }
 }
  
+@media (min-width: 2277px) {
+  .waves {
+    background-size: 3000px 700px;
+    background-image: url("../../public/images/lg-wave.png");
+  }
+}
+
+@media (min-width: 3000px) {
+  .waves {
+    background-size: 3850px 700px;
+    background-image: url("../../public/images/lg-wave.png");
+  }
+}
