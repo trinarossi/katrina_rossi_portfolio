@@ -4818,13 +4818,9 @@ var Portfolio = function Portfolio() {
     className: _styles_Portfolio_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].header
   }, "Graphic Design"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _styles_Portfolio_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].slideshows
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _styles_Portfolio_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].bf
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react_image_gallery__WEBPACK_IMPORTED_MODULE_2___default()), {
     items: gdBFImgs
-  }), ";"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _styles_Portfolio_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].logos
-  })))));
+  }), ";"))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Portfolio);
 

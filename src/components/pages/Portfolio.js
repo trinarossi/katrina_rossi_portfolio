@@ -109,13 +109,7 @@ const Portfolio = () => {
         <div className={styles.graphicDesign}>
           <h2 className={styles.header}>Graphic Design</h2>
           <div className={styles.slideshows}>
-            <div className={styles.bf}>
-              {/* <SlidingGallery1 imgArr={gdBFImgs} /> */}
               <ImageGallery items={gdBFImgs} />;
-            </div>
-            <div className={styles.logos}>
-              {/* <SlidingGallery2 imgArr={gdLogoImgs} /> */}
-            </div>
           </div>
         </div>
       </section>
