@@ -1,22 +1,42 @@
 import React from "react";
 import { useNav } from "../../hooks/useNav";
-import SlidingGallery1 from "../SlidingGallery1";
-import SlidingGallery2 from "../SlidingGallery2";
+// import SlidingGallery1 from "../SlidingGallery1";
+// import SlidingGallery2 from "../SlidingGallery2";
+import ImageGallery from 'react-image-gallery';
 import styles from "../../styles/Portfolio.module.css";
+import 'react-image-gallery/styles/css/image-gallery.css';
 
 const gdLogoImgs = [
-  "/images/gd/tools-tavern.png",
-  "/images/gd/sa-photography.png",
-  "/images/gd/club-fit.png",
-  "/images/gd/re-imagine.png",
+  {
+  original: "/images/gd/tools-tavern.png",
+  },
+  {
+    original: "/images/gd/sa-photography.png",
+  },
+  {
+    original: "/images/gd/club-fit.png",
+  },
+  {
+    original: "/images/gd/re-imagine.png",
+  }
 ];
 
 const gdBFImgs = [
-  "/images/gd/invited.png",
-  "/images/gd/cdl1.jpg",
-  "/images/gd/cdl2.jpg",
-  "/images/gd/babyshower.jpg",
-  "/images/gd/distracted_scholar.jpg",
+  {
+    original: "/images/gd/invited.png",
+  },
+  {
+    original: "/images/gd/cdl1.jpg",
+  },
+  {
+    original: "/images/gd/cdl2.jpg",
+  },
+  {
+    original: "/images/gd/babyshower.jpg",
+  },
+  {
+    original: "/images/gd/distracted_scholar.jpg",
+  }
 ];
 
 const Portfolio = () => {
@@ -90,12 +110,11 @@ const Portfolio = () => {
           <h2 className={styles.header}>Graphic Design</h2>
           <div className={styles.slideshows}>
             <div className={styles.bf}>
-              <h2 className={styles.slideshowTitle}>Invitations & Brochures</h2>
-              <SlidingGallery1 imgArr={gdBFImgs} />
+              {/* <SlidingGallery1 imgArr={gdBFImgs} /> */}
+              <ImageGallery items={gdBFImgs} />;
             </div>
             <div className={styles.logos}>
-              <h2 className={styles.slideshowTitle}>Logos</h2>
-              <SlidingGallery2 imgArr={gdLogoImgs} />
+              {/* <SlidingGallery2 imgArr={gdLogoImgs} /> */}
             </div>
           </div>
         </div>
