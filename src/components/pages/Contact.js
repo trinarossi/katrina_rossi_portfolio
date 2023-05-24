@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useNav } from "../../hooks/useNav";
 import styles from "../../styles/Contact.module.css";
 
 const Contact = () => {
   const contactRef = useNav("Contact");
+  const [emailSent, setEmailSent] = useState(false);
 
   const form = useRef();
 
@@ -26,6 +27,8 @@ const Contact = () => {
           console.log(error.text);
         }
       );
+      setEmailSent(true);
+      form.current.reset();
   };
 
   return (
@@ -79,7 +82,7 @@ const Contact = () => {
               <input type="email" name="user_email" placeholder="oops@ididitagain.com" required/>
               <label>Message</label>
               <textarea name="message" placeholder="Oh, it's beautiful, but wait a minute, isn't this...but I thought the old lady dropped it into the ocean in the end? Aw, you shouldn't have!" required/>
-              <input className={styles.submit} type="submit" value="Send" />
+              <input className={styles.submit} type="submit" value={emailSent ? "Email sent!" : "Send"} />
             </form>
           </div>
           {/* <div className={styles.bye}>

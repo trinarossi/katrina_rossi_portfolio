@@ -130,10 +130,6 @@
   cursor: pointer;
 }
 
-.submit:focus {
-  background-color: #E59F71;
-}
-
 @media only screen and (max-width: 40em) { 
 .container {
   height: 60rem;
